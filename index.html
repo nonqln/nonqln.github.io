@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LIZA PHOTO POZNAN</title>
+    <link rel="stylesheet" HREF="{{ url_for('static', filename="css/style.css") }}">
+</head>
+
+<body>
+    <div id="top" style="scroll-margin-top: 300px"></div>
+    <header>
+        <div class="header" style="z-index: 100" >
+            <a href="#top" class="headerH"><h1 CLASS="PHOTOPOZNAN">PHOTO POZNAN</h1></a>
+            <div class="nav">
+                <a href="#AboutMe"><button class="navbutton">about</button></a>
+                <a href="#Portfolio"><button class="navbutton">portfolio</button></a>
+                <a><button class="navbutton">social</button></a>
+                <a><button class="navbutton">connect</button></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="AboutMeBack">
+        <H1 class="AboutMe" id="AboutMe" style="scroll-margin-top: 150px">About me</H1>
+        <section class="template1">
+            <section class="section1">
+                <p>
+                    About me
+                </p>
+
+            </section>
+        </section>
+    </div>
+        <H1 class="Portfolio" id="Portfolio" style="scroll-margin-top: 100px">Portfolio</H1>
+        <section class="section2">
+                <section class="section3" onclick="openModal('modal-window1')">
+                    <h2 class="foldername">/folder1 </h2>
+                    <img class="imagefolder" src="static/images/folder1/p1.jpeg">
+                </section>
+                <section class="section3" onclick="openModal('modal-window2')">
+                    <h2 class="foldername">/folder1 </h2>
+                    <img  class="imagefolder" src="static/images/folder2/p1.jpeg">
+                </section>
+                <section class="section3" onclick="openModal('modal-window3')">
+                    <h2 class="foldername">/folder1 </h2>
+                    <img  class="imagefolder" src="static/images/folder3/p1.jpeg">
+                </section>
+
+        </section>
+
+    <div class="modal-window" id="modal-window1">
+        <div class="modal-body">
+            <section class="photofolder">
+                <h2 class="foldername">/folder1 </h2>
+                <button onclick="closeModal('modal-window1')" class="folderclosebutton">close</button>
+            </section>
+            <section class="photofoldercontent">
+                <img class="imagefolder" src="static/images/folder1/p1.jpeg">
+                <img class="imagefolder" src="static/images/folder1/p2.jpeg">
+                <img class="imagefolder" src="static/images/folder1/p3.jpeg">
+            </section>
+        </div>
+    </div>
+
+    <div class="modal-window" id="modal-window2">
+        <div class="modal-body">
+            <section class="photofolder">
+                <h2 class="foldername">/folder1 </h2>
+                <button onclick="closeModal('modal-window2')" class="folderclosebutton">close</button>
+            </section>
+            <section class="photofoldercontent">
+                <img class="imagefolder" src="static/images/folder2/p1.jpeg">
+                <img class="imagefolder" src="static/images/folder2/p2.jpeg">
+                <img class="imagefolder" src="static/images/folder2/p3.jpeg">
+            </section>
+        </div>
+    </div>
+
+    <div class="modal-window" id="modal-window3">
+        <div class="modal-body">
+            <section class="photofolder">
+                <h2 class="foldername">/folder1 </h2>
+                <button onclick="closeModal('modal-window3')" class="folderclosebutton">close</button>
+            </section>
+            <section class="photofoldercontent">
+                <img class="imagefolder" src="static/images/folder3/p1.jpeg">
+                <img class="imagefolder" src="static/images/folder3/p2.jpeg">
+                <img class="imagefolder" src="static/images/folder3/p3.jpeg">
+            </section>
+        </div>
+    </div>
+
+
+
+
+    <div class="formcontainer">
+        <form>
+            <h2 class="Connect" id="connect">CONNECT</h2>
+            <section class="formrow">
+                <label class="labelforma" for="email">email: </label>
+                <input type="text" class="inputtype" id="email" name="email">
+            </section>
+            <section class="formrow">
+                <label class="labelforma" for="telegram">telegram: </label>
+                <input type="text" class="inputtype" id="telegram" name="telegram">
+            </section>
+            <section class="formrow">
+                <label class="labelforma" for="phone">phone number: </label>
+                <input type="text" class="inputtype" id="phone" name="phone">
+            </section>
+            <br>
+            <input type="submit" value="SEND" class="submitbutton">
+
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
