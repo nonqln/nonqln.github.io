@@ -1,0 +1,421 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: darkslategrey;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+@font-face {
+    font-family: "Geologica-Black";
+    src: url("/static/fonts/Geologica/Geologica-Black.ttf");
+}
+@font-face {
+    font-family: "Geologica-Medium";
+    src: url("/static/fonts/Geologica/Geologica-Medium.ttf");
+}
+@font-face {
+    font-family: "Geologica-Bold";
+    src: url("/static/fonts/Geologica/Geologica-Bold.ttf");
+}
+
+
+.PHOTOPOZNAN {
+    color: darkslategrey;
+    text-decoration: none;
+    font-family: Geologica-Black, serif;
+    transition: color 0.5s ease;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+    }
+}
+.PHOTOPOZNAN:hover {
+    color: #233939;
+    transition: color 0.5s ease;
+}
+.header {
+    background-color: rgba(255, 255, 255, 0.94);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    border-bottom: solid #f4f9ff;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+.headerH {
+    text-decoration: none;
+    @media (max-width: 1200px) {
+        border-bottom: solid #f4f9ff;
+
+    }
+    @media (max-width: 768px) {
+        border-bottom: solid #f4f9ff;
+        background-color: white;
+    }
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+    @media (max-width: 1200px) {
+        gap: 5%;
+    }
+    @media (max-width: 768px) {
+        gap: 5%;
+    }
+
+}
+.navbutton {
+    background: none;
+    text-decoration: none;
+    border: none;
+    font-family: Geologica-Black, serif;
+    color: darkslategrey;
+    font-size: larger;
+    transition: transform 0.5s ease;
+}
+.navbutton:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+/* ОБО МНЕ */
+
+.AboutMeBack {
+    background: white;
+    margin: 8% 3% 3% 3%;
+    padding: 1%;
+    border-radius: 15px;
+
+    @media (max-width: 1200px) {
+        background: white;
+        margin: 10% 3% 3% 3%;
+        padding: 1%;
+        border-radius: 15px;
+    }
+    @media (max-width: 1000px) {
+        background: white;
+        margin: 12% 3% 3% 3%;
+        padding: 1%;
+        border-radius: 15px;
+    }
+    @media (max-width: 800px) {
+        background: white;
+        margin: 20% 3% 3% 3%;
+        padding: 1%;
+        border-radius: 15px;
+    }
+    @media (max-width: 580px) {
+        background: white;
+        margin: 27% 3% 3% 3%;
+        padding: 1%;
+        border-radius: 15px;
+    }
+}
+
+.AboutMe {
+    font-family: "Geologica-Bold", serif;
+    text-align: center;
+    color: darkslategrey;
+}
+.template1 {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1%;
+    border-radius: 15px;
+    padding: 0 10% 2% 10%;
+}
+.section1 {
+    background: aliceblue;
+    width: 100%;
+    border-radius: 15px;
+    padding: 3%;
+    margin: 1%;
+    font-family: "Geologica-Medium", serif;
+    font-size: large;
+    text-align: justify;
+    color: #243a3a;
+
+}
+
+/*   ПОРТФОЛИО   */
+
+.Portfolio {
+    font-family: "Geologica-Bold", serif;
+    text-align: center;
+    color: #acc5c5;
+}
+
+
+/*   Модальное окно ПОРТФОЛИО  */
+
+.modal-window {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(43, 71, 71, 0.19);
+    border-radius: 15px;
+
+    z-index: 500;
+}
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.28);
+}
+.modal-body{
+    background-color: rgba(36, 58, 58, 0.87);
+    border-radius: 15px;
+    padding: 2%;
+    margin: 1%;
+}
+.foldername {
+    z-index: 3;
+    color: #acc5c5;
+    font-family: "Geologica-Bold",serif;
+    position: relative;
+    pointer-events: none;
+    filter: none;
+    }
+
+.photofolder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.photofoldercontent {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.imagefolder {
+    width: 33%;
+    color: #748181;
+    border-radius: 5px;
+    border: 1px solid;
+    transition: filter 0.5s;
+}
+
+
+.folderclosebutton {
+    background: none;
+    border: none;
+    color: #acc5c5;
+    font-family: "Geologica-Bold",serif;
+    font-size: larger;
+    transition: filter 1s;
+}
+.folderclosebutton:hover {
+    background: none;
+    border: none;
+    color: #acc5c5;
+    font-family: "Geologica-Bold",serif;
+    font-size: larger;
+    filter: brightness(0.5);
+
+    transition: filter 1s;
+}
+
+
+
+.section2 {
+    background: #2b4747;
+    border-radius: 15px;
+    padding: 1%;
+    margin: 3%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.section3 {
+    background: rgb(91, 129, 129);
+    border-radius: 15px;
+    padding: 4% 3% 4% 3%;
+    margin: 1%;
+    width: 100%;
+    color: white;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    transition: background-color 1s;
+}
+
+.section3:hover {
+    background-color: rgb(69, 99, 99);
+    transition: background-color 0.5s;
+    .imagefolder {
+        filter: brightness(0.7);
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .section2 {
+        background: #2b4747;
+        border-radius: 15px;
+        padding: 1%;
+        margin: 3%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+
+    }
+
+    .section3 {
+        background: rgb(91, 129, 129);
+        border-radius: 15px;
+        padding: 5% 3% 5% 3%;
+        margin: 1%;
+        color: white;
+        width: 92%;
+    }
+
+    .section3 p {
+        font-family: "Geologica-Medium", sans-serif;
+        font-size: large;
+        color: darkslategrey;
+    }
+}
+
+
+
+/*   КОННЕКТ   */
+
+.Connect {
+    font-family: "Geologica-Bold", serif;
+    text-align: center;
+    color: #acc5c5;
+}
+
+
+
+/* форма */
+
+form { /*  Форма   */
+    font-family: "Geologica-Black", serif;
+    border-radius: 5%;
+    padding: 0 5% 0 5%;
+}
+
+.labelforma { /*  Названия   */
+    color: darkslategrey;
+    font-family: "Geologica-Black", serif;
+    font-size: 26px;
+    margin-right: 5px;
+    text-align: right;
+}
+.formcontainer { /*  Контейнер   */
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding-bottom: 30px;
+    border-radius: 40px;
+    margin: 1%;
+}
+.formrow {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.inputtype { /*  Ввод   */
+    background-color: ghostwhite;
+    font-size: 20px;
+    font-family: "Geologica-Black", serif;
+    border-radius: 13px;
+    outline: none;
+    border: 1px solid darkslategrey;
+    transition: background-color 1s ease;
+
+
+}
+.inputtype:hover {
+    background-color: rgba(0,144,255,0.09);
+    font-size: 20px;
+    font-family: "Geologica-Black", serif;
+    border-radius: 13px;
+    outline: none;
+    border: 1px solid darkslategrey;
+    transition: background-color 1s ease;
+}
+.inputtype:focus {
+    background-color: rgba(0,144,255,0.19);
+    font-size: 20px;
+    font-family: "Geologica-Black", serif;
+    border-radius: 13px;
+    outline: none;
+    border: 1px solid darkslategrey;
+}
+
+.submitbutton { /*  Кнопка   */
+    display: block;
+    margin: auto;
+    background-color: darkslategrey;
+    color: ghostwhite;
+    font-family: "Geologica-Black", serif;
+    border-radius: 17px;
+    font-size: 20px;
+    padding: 5px 13px 5px 15px;
+    outline: none;
+    border: darkslategrey;
+    text-align: center;
+    transition: background-color 1s ease;
+}
+.submitbutton:hover {
+    background-color: cadetblue;
+    color: ghostwhite;
+    font-family: "Geologica-Black", serif;
+    border-radius: 17px;
+    font-size: 20px;
+    transition: background-color 1s ease, color 1s ease, font-size 1s ease;
+}
